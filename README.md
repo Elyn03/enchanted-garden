@@ -1,4 +1,4 @@
-# Headless 2024
+# Enchanted Garden
 
 Headless 2024 course starter for IIM Digital School.
 
