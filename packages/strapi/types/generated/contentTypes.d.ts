@@ -785,6 +785,7 @@ export interface ApiFlowerFlower extends Schema.CollectionType {
     description: Attribute.RichText;
     tag: Attribute.Relation<'api::flower.flower', 'oneToOne', 'api::tag.tag'>;
     image: Attribute.Media & Attribute.Required;
+    price: Attribute.Decimal & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -807,7 +808,7 @@ export interface ApiTagTag extends Schema.CollectionType {
   info: {
     singularName: 'tag';
     pluralName: 'tags';
-    displayName: 'Tag';
+    displayName: 'Tags';
     description: '';
   };
   options: {
