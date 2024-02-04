@@ -33,7 +33,7 @@ onMounted(() => {
     <div class="w-[100%] flex flex-col lg:flex-row lg:justify-around p-4 bg-gradient-to-r from-[#FBDFCC] to-[#F3CBDE]">
       
       <div class="form-group flex gap-2 items-center justify-center">
-        <button
+        <!-- <button
           v-for="tag in tags?.data" :key="tag.id"
           :class="[search.queryTags.includes(tag.slug) ? 'bg-gray-900 text-white' : 'bg-gray-200 text-gray-900']"
           :title="tag.color"
@@ -44,7 +44,7 @@ onMounted(() => {
 
         <button class="h-[auto] appearance-none border-none bg-transparent p-0 underline cursor-pointer" @click="search.resetTags" >
           Reset
-        </button>
+        </button> -->
       </div>
 
       <input placeholder="Search a flower" v-model="search.query" class="px-4 py-2 focus:outline-none" type="search">
