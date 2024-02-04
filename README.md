@@ -1,6 +1,6 @@
 # Enchanted Garden
 
-Headless 2024 course starter for IIM Digital School.
+Project flower for IIM Digital School.
 
 Project including a pnpm workspace managing both Strapi and Nuxt 3 applications.
 
