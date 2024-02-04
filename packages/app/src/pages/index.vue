@@ -49,12 +49,12 @@ const search = useSearchStore()
       description2="Embrace the beauty of nature with us!"
     />
 
-    <section class="p-4 my-5 flex justify-center flex-wrap gap-5">
-      <div class="w-1/4 flex flex-col justify-start items-center gap-3">
+    <section class="p-4 my-5 flex flex-col lg:flex-row justify-center flex-wrap gap-5">
+      <div class="lg:w-1/4 flex flex-col justify-start items-center gap-3">
         <h2 class="m-0">Map</h2>
         <img class="w-1/2" src="../assets/img/map.png" alt="">
       </div>
-      <div class="w-1/4 flex flex-col justify-start items-center gap-3">
+      <div class="lg:w-1/4 flex flex-col justify-start items-center gap-3">
         <h2 class="m-0">Location</h2>
         <div>
           <p class="p-1 m-0">Enchanted Garden</p>
@@ -62,7 +62,7 @@ const search = useSearchStore()
           <p class="p-1 m-0">75003 Paris, France</p>
         </div>
       </div>
-      <div class="w-1/4 flex flex-col justify-start items-center gap-3">
+      <div class="lg:w-1/4 flex flex-col justify-start items-center gap-3">
         <h2 class="m-0">Access</h2>
         <div>
           <p class="p-1 m-0">Metro line 9: République</p>
@@ -72,9 +72,9 @@ const search = useSearchStore()
       </div>
     </section>
 
-    <section class="h-1/3 w-full flex relative my-10 bg-gradient-to-r from-[#FBDFCC] to-[#F3CBDE]">
-      <img class="h-[370px] object-cover w-1/2" src="../assets/img/send-flower.jpg" alt="">
-      <div class="w-1/2 p-10 flex flex-col gap-3">
+    <section class="h-1/3 w-full flex flex-col lg:flex-row relative my-10 bg-gradient-to-r from-[#FBDFCC] to-[#F3CBDE]">
+      <img class="w-[100vw] lg:w-1/2 h-[370px] object-cover" src="../assets/img/send-flower.jpg" alt="">
+      <div class="w-[100vw] lg:w-1/2 p-2 lg:p-10 flex flex-col gap-3">
         <h2 class="m-0">Contact us</h2>
         <p class="m-0">If you have any question, send us a message and we'll reply as fast as we can.</p>
         <form action="" class="flex flex-col gap-2">

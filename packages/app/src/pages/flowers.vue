@@ -30,7 +30,7 @@ onMounted(() => {
   <div class="flex flex-col items-center gap-y-4">
     <TheHeader />
     
-    <div class="w-[100%] flex justify-around p-4 bg-gradient-to-r from-[#FBDFCC] to-[#F3CBDE]">
+    <div class="w-[100%] flex flex-col lg:flex-row lg:justify-around p-4 bg-gradient-to-r from-[#FBDFCC] to-[#F3CBDE]">
       
       <div class="form-group flex gap-2 items-center justify-center">
         <button
