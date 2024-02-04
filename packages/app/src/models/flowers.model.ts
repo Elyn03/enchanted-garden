@@ -3,14 +3,16 @@ export interface IFlower {
   name: string
   description: string
   slug: string
-  publishedAt: string
+  createdAt: string
   tags: ITag[]
   image: Image
+  price: number
 }
 
 export interface ITag {
   id: number
   color: string
+  slug: string
 }
 
 export interface Image {

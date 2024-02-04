@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js'
-import type { IFlower, FlowersData } from '~/models/flowers.model'
+import type { ITag, IFlower, FlowersData } from '~/models/flowers.model'
 
 export const useSearchStore = defineStore('search', () => {
   const { find } = useStrapi4()
@@ -15,12 +15,18 @@ export const useSearchStore = defineStore('search', () => {
 
   const fuse = computed(() => new Fuse(Array.from(elements), {
     keys,
-    threshold: 0.4,
+    threshold: 0.1,
   }))
 
   const sortedElements = computed(() => {
     return elements.sort((a, b) => {
       return a.name < b.name ? -1 : 1
+    })
+  })
+
+  const newArrival = computed(() => {
+    return elements.sort((a, b) => {
+      return a.createdAt > b.createdAt ? -1 : 1
     })
   })
 
@@ -32,13 +38,13 @@ export const useSearchStore = defineStore('search', () => {
 
   const sortedByTags = computed(() => {
     if (!queryTags.value.length)
-      return results.value
-    return results.value.filter((flowers) => {
-      return flowers.tags.some(tag => queryTags.value.includes(tag.slug))
-    })
-  })
+      return results.value;
+    return results.value.filter((flower) => {
+      return flower.tags.some((tag: ITag) => queryTags.value.includes(tag.slug));
+    });
+  });
 
   const resetTags = () => queryTags.value = []
 
-  return { query, results, elements, pending, sortedByTags, queryTags, resetTags }
+  return { query, results, elements, pending, sortedByTags, newArrival, queryTags, resetTags }
 })
